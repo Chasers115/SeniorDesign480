@@ -1,0 +1,55 @@
+scene number  //Scene ID
+Map Number/Name
+Associated Event ID
+//Expected Note
+Title
+(risk-level)    //Used for scene generation
+(tags[])        //can be useful for data collection. We may not use this as much, but still should be exported
+
+
+//Make these structs. 
+
+/*
+We can choose to include these or not. If we choose to include them, then they would have to be static, meaning once
+we create the file, you shouldn't change that or you can have insert anomalies.
+If we choose not to include this information, we would have to insert the data into 
+excell or SQL. We can always try talking to Dr. H-R, and see how much info she wants. 
+I would say have VERY basic info. 
+Maybe we can make this like a good, neutral, bad kind of deal.
+
+*/
+
+//Can be used for scene generation, outputing to excel/sSQL
+//or be used to recovering data ingame
+1 (choice): 
+    {   
+        What Happened
+        Response
+        Was it good or bad
+
+        Basically, here should contain information that all parts will use. 
+        Notes for data collection should be here, as well as information that can be pulled
+        for the player to see how they have been doing. 
+        Create fields for each thing that will be used, but I would try and make the
+        struct definition outside of a particular file. That way if we need to add in something new,
+        it can tell us if everything matches or not. 
+
+    }   
+2 (choice): 
+    {
+        WhatHappened
+    }
+3 (choice): 
+    {
+        WhatHappened
+    }
+
+
+
+For automating testing to ensure that each file links to a proper scene
+    1. Check the Map name/ID to the Json
+    2. Match the Event ID to the Json
+    3. Create a note or something like that on the Scenario.
+    4. Check that Expected Note equals the note. If so, there is a proper mapping. If not, invalid.
+    4a. This note should contain the ID. It might even be easier to make the note the same thing
+        as the scene ID. 

@@ -1,0 +1,30 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "title": "Scene Meta Info",
+    "type": "object",
+    "required": ["Scene Number", "Map Number", "Event ID", "Title"],
+    "additionalProperties": false,
+    "properties": {
+        "Scene Number": {
+            "type": "number"
+        },
+        "Map Number": {
+            "type": "number"
+        },
+        "Event ID": {
+            "type": "number"
+        },
+        "Title": {
+            "type": "string"
+        },
+        "Risk Level": {
+            "type": "number"
+        },
+        "Tags": {
+            "type": "array",
+            "tagList": {
+                "type": "string"
+            }
+        }
+    }
+}

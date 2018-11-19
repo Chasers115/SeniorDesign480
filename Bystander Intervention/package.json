@@ -8,5 +8,11 @@
         "width": 816,
         "height": 624,
         "icon": "icon/icon.png"
+    },
+    "dependencies": {
+        "convert-excel-to-json": "^1.5.2",
+        "excel-as-json": "^2.0.2",
+        "fs": "0.0.1-security",
+        "xml2js": "^0.4.19"
     }
 }

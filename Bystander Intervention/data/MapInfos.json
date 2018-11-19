@@ -1,8 +1,8 @@
 [
 null,
-{"id":1,"expanded":true,"name":"Main Map","order":1,"parentId":0,"scrollX":1150.5,"scrollY":709.5},
+{"id":1,"expanded":true,"name":"Main Map","order":1,"parentId":0,"scrollX":1022.6666666666666,"scrollY":1022.6666666666666},
 {"id":2,"expanded":true,"name":"Dorm Halls","order":3,"parentId":6,"scrollX":1150.5,"scrollY":1051.5},
-{"id":3,"expanded":false,"name":"Connor Event","order":12,"parentId":1,"scrollX":4090.6666666666665,"scrollY":3674.6666666666665},
+{"id":3,"expanded":false,"name":"Connor Event","order":12,"parentId":1,"scrollX":1534,"scrollY":946},
 {"id":4,"expanded":false,"name":"Chase Event","order":13,"parentId":1,"scrollX":1033.3333333333333,"scrollY":641.3333333333334},
 {"id":5,"expanded":false,"name":"Rooms","order":4,"parentId":2,"scrollX":1150.5,"scrollY":709.5},
 {"id":6,"expanded":true,"name":"Dorm Building","order":2,"parentId":1,"scrollX":1162.5,"scrollY":721.5},

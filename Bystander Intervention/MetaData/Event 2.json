@@ -1,0 +1,7 @@
+{
+"example" : {"$ref" : "#/MetsData/MetaOutline.json"},
+"example.properties.SceneNumber" : 5,
+"example.properties.MapNumber" : 4
+
+
+}

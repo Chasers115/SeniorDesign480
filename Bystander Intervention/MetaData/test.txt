@@ -1,7 +1,6 @@
 scene number  //Scene ID
 Map Number/Name
 Associated Event ID
-//Expected Note
 Title
 (risk-level)    //Used for scene generation
 (tags[])        //can be useful for data collection. We may not use this as much, but still should be exported
@@ -53,3 +52,14 @@ For automating testing to ensure that each file links to a proper scene
     4. Check that Expected Note equals the note. If so, there is a proper mapping. If not, invalid.
     4a. This note should contain the ID. It might even be easier to make the note the same thing
         as the scene ID. 
+
+
+Trying to make a Schema that will allow me to model my meta-data
+about all of my scenarios so all data validation is automated,
+and I only have to worry about ensuring that it is properly 
+linked up with the in-game elements.
+
+Need to create text files for each scene. Then read them in with 
+a JavaScript call, and parse it through the Json schema. If it is valid, then output
+the json to its own file. If it is not valid, then something is wrong. 
+You will probably need to work on this for quite a while.

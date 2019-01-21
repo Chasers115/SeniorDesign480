@@ -6,7 +6,7 @@ var fs = require('fs');
 
 const result = excelToJson(
     {
-        sourceFile: 'Book3.xlsx',
+        sourceFile: 'MetaData.xlsx',
         header:
         {
             rows: 1
@@ -19,7 +19,8 @@ const result = excelToJson(
             D: 'mapID',
             E: 'EventID',
             F: 'Option One',
-            G: 'Option 2'
+            G: 'Option 2',
+            H: 'Option 3'
 
         }
     });

@@ -1,3 +1,6 @@
+
+
+
 'use strict';
 
 
@@ -20,7 +23,8 @@ const result = excelToJson(
             E: 'EventID',
             F: 'Option One',
             G: 'Option 2',
-            H: 'Option 3'
+            H: 'Option 3',
+            I: 'In RPG Maker'
 
         }
     });
@@ -30,10 +34,10 @@ var singleResult = result.Sheet1;
 //console.log(test);
 
 
-console.log(singleResult.length);
+//console.log(singleResult.length);
 let length = Math.ceil(singleResult.length);
 let part;
-console.log("Starting parse");
+//console.log("Starting parse");
 let i;
 /*For loop will go through the updated file, and get each line. It will then output
 each lineas its own json. 
@@ -60,8 +64,8 @@ for (i = 0; i < length; i++) {
     })
 
 
-    console.log(part);
-    console.log("NEW LINE");
+    //console.log(part);
+    //console.log("NEW LINE");
 }
 //result will be the object
 //console.log(result);
@@ -77,19 +81,5 @@ for (i = 0; i < length; i++) {
     };
     console.log("Should be good");
 })
-*/
-
-
-
-/*Strucure:
-Use JSON.parse. 
-If needed, you may need top open the file and read it in. 
-We still have result actually, so this could work in our favor. 
-
-use something like 
-let sp
-
-
-
 */
 

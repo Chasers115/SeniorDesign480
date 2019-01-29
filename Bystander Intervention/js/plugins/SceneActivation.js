@@ -1,7 +1,7 @@
 /*:
 *
-*@plugindesc This is mainly a test for the plugin
-*Break Line
+*@plugindesc PLug in used for populating, and using arrays for scene activation
+*
 *@author Bystander Intervention
 *
 *
@@ -11,12 +11,7 @@
 *
 *
 *
-*
-*
-*
-*
-*
-*
+
 *
 *@help
 *
@@ -43,17 +38,39 @@ Once we get that, then we can make it so the engine handles generating scenes, r
 
 /*Below is an example on how to use plugin commands. It may be a little rudamentary, but it should work.
 */
+//Put ALL functionality inside
 (function() {
 
-    var _Game_Interperter_pluginCommand = Game_Interpreter.prototype.pluginCommand;
+    //does alaising so there isnt interference with other plugins.
+    var _Bystander_pluginCommand = Game_Interpreter.prototype.pluginCommand;
+
+
     Game_Interpreter.prototype.pluginCommand = function(command, args) {
-        _Game_Interperter_pluginCommand.call(this, command, args);
+        _Bystander_pluginCommand.call(this, command, args);
 
 
-        if (command == "activateScene")
+        //function call for populating tables that will be used in the game.
+        if (command == "populateTables")
+        {   
+            $gameMessage.add('Populating Tables to be used.');
+            
+
+
+
+
+
+        }
+
+        //function call for activating a scene
+        else if (command == "activateScene")
         {
-            var number = Number(args[0]) + Number(args[1]);
-            $gameMessage.add(String(number));
+            $gameMessage.add('Activating a scene');
+        }
+
+        //function call for deleting a scene.
+        else if (command == "deleteScene")
+        {
+            $gameMessage.add('Deleting a used scene');
         }
     };
 

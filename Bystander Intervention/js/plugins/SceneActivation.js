@@ -38,12 +38,15 @@ Once we get that, then we can make it so the engine handles generating scenes, r
 
 /*Below is an example on how to use plugin commands. It may be a little rudamentary, but it should work.
 */
+
+
+
 //Put ALL functionality inside
 (function() {
 
     //does alaising so there isnt interference with other plugins.
     var _Bystander_pluginCommand = Game_Interpreter.prototype.pluginCommand;
-
+    var SceneHandler = require('js/Scene_Info.js');
 
     Game_Interpreter.prototype.pluginCommand = function(command, args) {
         _Bystander_pluginCommand.call(this, command, args);
@@ -52,9 +55,9 @@ Once we get that, then we can make it so the engine handles generating scenes, r
         //function call for populating tables that will be used in the game.
         if (command == "populateTables")
         {   
-            $gameMessage.add('Populating Tables to be used.');
-            
-
+           // $gameMessage.add('Populating Tables to be used.');
+            //function call on Scene_info file to populate the Tables
+            SceneHandler.populate_tables;
 
 
 
@@ -64,13 +67,18 @@ Once we get that, then we can make it so the engine handles generating scenes, r
         //function call for activating a scene
         else if (command == "activateScene")
         {
-            $gameMessage.add('Activating a scene');
+            //$gameMessage.add('Activating a scene');
+            //function call to activate a scene in the populated tables. 
+
+
+
+
         }
 
         //function call for deleting a scene.
         else if (command == "deleteScene")
         {
-            $gameMessage.add('Deleting a used scene');
+           // $gameMessage.add('Deleting a used scene');
         }
     };
 

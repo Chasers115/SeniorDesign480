@@ -1,5 +1,5 @@
 
-var tools = require("./Scene_Info.js");
+var tools = require("../Scene_Info.js");
 
 
 tools.populate_tables();

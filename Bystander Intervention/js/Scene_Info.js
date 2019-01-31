@@ -19,16 +19,20 @@ export function populate_tables() {
     //$gameMessage.add('populaitng tables from Scene_info');
   
 }*/
+/*
 module.exports = {
     populate_tables: function() {
-        console.log("Populating tables inside code");
+        //onsole.log("Populating tables inside code");
+        $gameMessage.add('populating tables within code');
     },
     multiply: function(a,b) {
         return a*b
     }
-};
+};*/
 //call when making a new game
 //define an array with 5 risk level arrays
+
+
 var array = [];
 array.push( [] );
 array.push( [] );

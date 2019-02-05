@@ -44,6 +44,17 @@ Once we get that, then we can make it so the engine handles generating scenes, r
 
 //Put ALL functionality inside
 
+//const SceneList = require('./fullMock.json');
+
+
+
+//const fs = require('fs');
+var data;
+
+
+//console.log(data);
+//console.log(config.firstName + ' ' + config.lastName);
+
 var indexChosen;
 var riskLevel;
 var min = 0;
@@ -57,7 +68,12 @@ var num3 = 46;
 var num4 = 61;
 
 
-
+var mainArray = [];
+var array1 = [];
+var array2 = [];
+var array3 = [];
+var array4 = [];
+var array5 = [];
 
 
 
@@ -71,7 +87,7 @@ array.push( [] );
 array.push( [] );
 array.push( [] );
 array.push( [] );
-array.push( [] )
+array.push( [] );
 
 //populate the risk level arrays with the scene id arrays
 //index zero is risk level 1
@@ -166,12 +182,53 @@ while(array[4].length != 0)
 
 
 
- function populateTables() {
+var fs = require('fs');
+
+
+function populateTables() {
     //PUT LOGIC FOR POPULATING THE TABLES HERE.
-    $gameMessage.add('populating tables within code');
+    //$gameMessage.add("Attempting to read");
+
+/*\
+jsonContent is a JSON object that looks exactly like fullMock.json (fullMeta later)
+if you want to access items in the first element do jsonContent[0].ELEMENTWANTED.
+
+
+
+
+*/
+
+
+   var fileContents = fs.readFileSync('js\\plugins\\fullMock.json');
+   var jsonContent = JSON.parse(fileContents);
+   $gameMessage.add(jsonContent[1].SceneID);
+
+
+
+
+
+    //var fileContents = await fs.promises.readFile('js/plugins/fullMock.json');
+   // $gameMessage.add('Read');
+    //data = JSON.parse(fileContents);
+    //$gameMessage.add('doing a thing');
+    $gameMessage.add(data);
 }
 function activateScene(){
-    $gameMessage.add("Activating a scene from in side code");
+    $gameMessage.add(array1[0]);
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
 }
 (function() {
     

@@ -5,7 +5,45 @@
  *  For Use in The Bystander Intervention Simulator
  * ========================================================== */
 
+(function () {
 
+    //Setup function in case we want to split up our code further  
+    function setup() {
+        //=============================================================================
+        //  MVNodeFS
+        //=============================================================================    
+        function MVOutputNode() {
+
+        }
+
+
+        MVOutputNode.output = function (outputdata1, outputdata2) {
+            var path = window.location.pathname.replace(/(\/www|)\/[^\/]*$/, '/data/');
+            if (path.match(/^\/([A-Z]\:)/)) {
+                path = path.slice(1);
+            }
+            path = decodeURIComponent(path) + 'myText.xls';
+            console.log(path);
+            var fs = require('fs');
+
+            fs.appendFile(path, outputdata1 + "\t" + outputdata2 + "\n", function (err) {
+                if (err) {
+                    return console.log(err);
+                }
+            });
+        }
+
+        //Export Class
+        window.MVOutputNode = MVOutputNode;
+    }
+
+    //Execute setup function
+    setup();
+})();
+
+
+
+/*
 (function () {
 
     //Setup function in case we want to split up our code further  
@@ -41,13 +79,14 @@
             relativePath = (Utils.isNwjs() && Utils.isOptionValid("test")) ? relativePath : "/www/" + relativePath;
 
             //Creates the path
-            var path = window.location.pathname.replace(/(\/www|)\/[^\/]*$/, '/');
+            var path = window.location.pathname.replace(/(\/www|)\/[^\/]*$/, '/data/');
             if (path.match(/^\/([A-Z]\:)/)) {
                 path = path.slice(1);
             }
 
             //Decode URI component and return the path
-            path = decodeURIComponent(path) + "Testing.txt";
+            path = decodeURIComponent(path) + 'myText.txt';
+            console.log(path);
             return path;
         };
 
@@ -58,7 +97,7 @@
     //Execute setup function
     setup();
 })();
-
+*/
 
 
 

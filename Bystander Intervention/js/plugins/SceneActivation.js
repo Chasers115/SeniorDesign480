@@ -1,4 +1,4 @@
-/*:
+﻿/*:
 *
 *@plugindesc PLug in used for populating, and using arrays for scene activation
 *
@@ -192,18 +192,38 @@ function populateTables() {
 /*\
 jsonContent is a JSON object that looks exactly like fullMock.json (fullMeta later)
 if you want to access items in the first element do jsonContent[0].ELEMENTWANTED.
-
-
-
-
 */
-
 
    var fileContents = fs.readFileSync('js\\plugins\\fullMock.json');
    var jsonContent = JSON.parse(fileContents);
-   $gameMessage.add(jsonContent[1].SceneID);
 
+   var scenes = 74;
 
+   for (var i = 0; i < scenes; i++) {
+       if (jsonContent[i].Risk == '1') {
+           array1.push(jsonContent[i].SceneID);
+       }
+       if (jsonContent[i].Risk == '2') {
+           array2.push(jsonContent[i].SceneID);
+       }
+       if (jsonContent[i].Risk == '3') {
+           array3.push(jsonContent[i].SceneID);
+       }
+       if (jsonContent[i].Risk == '4') {
+           array4.push(jsonContent[i].SceneID);
+       }
+       if (jsonContent[i].Risk == '5') {
+           array5.push(jsonContent[i].SceneID);
+       }
+   }
+
+   mainArray.push(array1);
+   mainArray.push(array2);
+   mainArray.push(array3);
+   mainArray.push(array4);
+   mainArray.push(array5);
+
+   $gameMessage.add("Arrays Populated");​
 
 
 
@@ -214,21 +234,67 @@ if you want to access items in the first element do jsonContent[0].ELEMENTWANTED
     $gameMessage.add(data);
 }
 function activateScene(){
-    $gameMessage.add(array1[0]);
+
+    var indexChosen;
+    var riskLevel = 0;
+    var min = 0;
+    var max = 1;
+
+    var index;
+    var count = 0;
+    var number = 5;
+
+    //Number generator to pick 5 scenes​
+    //while(count < number)​
+    //{​
+    //determines what risk level to choose​
+    //generate a number between 1 and 100​
+    indexChosen = Math.floor((Math.random() * 100) + 1);
+    //console.log("random: " + indexChosen);
+
+    if (indexChosen <= 75 || mainArray.length == 1) {
+
+
+        //insert condition    ​
+
+        //if the risk level has no more scenes pick the next risk level​
+        if (mainArray[min].length == 0 || min >= 5) {
+            min++;
+
+            if (max <= 3) {
+                max++;
+            }
+        }
+
+
+        index = Math.floor(Math.random() * mainArray[min].length);
+        $gameMessage.add("scene to activate is " + mainArray[min][index]);
+        $gameSwitches.setValue(mainArray[min][index], true);
+        mainArray[min].splice(index, 1); //Remove the item from the array​
+        //console.log(mainArray);
 
 
 
+    }
+    if (indexChosen > 75) {
 
 
+        index = Math.floor(Math.random() * mainArray[max].length); //generate a random number​
+        $gameMessage.add("scene to activate is " + mainArray[max][index]);
+        $gameSwitches.setValue(mainArray[min][index], true);
+        mainArray[max].splice(index, 1); // Remove the item from the array​
+        //console.log(mainArray);
 
 
+    }
 
+    //console.log("min: " + min);
+    //console.log("max: " + max);
 
+    count++;
 
-
-
-
-    
+//}​
+   
 }
 (function() {
     

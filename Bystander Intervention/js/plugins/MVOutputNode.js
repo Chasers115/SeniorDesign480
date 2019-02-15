@@ -16,17 +16,8 @@
 
         }
 
-
         MVOutputNode.output = function (outputdata1, outputdata2) {
-            var path = window.location.pathname.replace(/(\/www|)\/[^\/]*$/, '/data/');
-            if (path.match(/^\/([A-Z]\:)/)) {
-                path = path.slice(1);
-            }
-            path = decodeURIComponent(path) + 'myText.xls';
-            console.log(path);
-            var fs = require('fs');
-
-            fs.appendFile(path, outputdata1 + "\t" + outputdata2 + "\n", function (err) {
+            fs.appendFile('myText.xls', outputdata1 + "\t" + outputdata2 + "\n", function (err) {
                 if (err) {
                     return console.log(err);
                 }
@@ -40,64 +31,3 @@
     //Execute setup function
     setup();
 })();
-
-
-
-/*
-(function () {
-
-    //Setup function in case we want to split up our code further  
-    function setup() {
-        //=============================================================================
-        //  MVNodeFS
-        //=============================================================================    
-        function MVOutputNode() {
-
-        }
-
-        MVOutputNode.fs = require("fs");
-
-        //Wrapper for Node.js writeFileSync
-        MVOutputNode.writeFile = function (filePath, filename, data) {
-            filePath = this.createPath("/" + filePath + "/");
-            this.fs.writeFileSync(filePath + filename, data);
-            console.log("Wrote File: " + filename);
-        };
-
-        //Wrapper for Node.js readFileSync
-        MVOutputNode.readFile = function (filePath, filename) {
-            filePath = this.createPath("/" + filePath + "/");
-            console.log("Read File:", filename);
-            //Returning the file we read using utf8 encoding; this means it will be in text
-            return this.fs.readFileSync(filePath + filename, "utf8");
-        };
-
-        //Method for creating the proper file path from the relative file path
-        MVOutputNode.createPath = function (relativePath) {
-
-            //Checks if MV is in dev mode or production and appropriate path
-            relativePath = (Utils.isNwjs() && Utils.isOptionValid("test")) ? relativePath : "/www/" + relativePath;
-
-            //Creates the path
-            var path = window.location.pathname.replace(/(\/www|)\/[^\/]*$/, '/data/');
-            if (path.match(/^\/([A-Z]\:)/)) {
-                path = path.slice(1);
-            }
-
-            //Decode URI component and return the path
-            path = decodeURIComponent(path) + 'myText.txt';
-            console.log(path);
-            return path;
-        };
-
-        //Export Class
-        window.MVOutputNode = MVOutputNode;
-    }
-
-    //Execute setup function
-    setup();
-})();
-*/
-
-
-

@@ -9,7 +9,7 @@ var fs = require('fs');
 
 const result = excelToJson(
     {
-        sourceFile: 'MockData.xlsx',
+        sourceFile: 'MetaData.xlsx',
         header:
         {
             rows: 1
@@ -74,7 +74,7 @@ for (i = 0; i < length; i++) {
 //write the json to a json file titled "fullMeta.json". This will all end up on one line though,
 //so there will need to be another function call to transform that file into multiple json files
 //for easier usability. 
-fs.writeFile('fullMock.json', JSON.stringify(singleResult), (err) => {
+fs.writeFile('fullMeta.json', JSON.stringify(singleResult), (err) => {
     if(err){
         console.error(err);
         return;

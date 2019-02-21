@@ -16,8 +16,8 @@
 
         }
 
-        MVOutputNode.output = function (outputdata1, outputdata2) {
-            fs.appendFile('myText.xls', outputdata1 + "\t" + outputdata2 + "\n", function (err) {
+        MVOutputNode.output = function (od1, od2, od3) {
+            fs.appendFile('myText.xls', od1 + "\t" + od2 + "\t" + od3 + "\t" + $gameSystem.playtimeText() + "\n", function (err) {
                 if (err) {
                     return console.log(err);
                 }

@@ -197,9 +197,9 @@ if you want to access items in the first element do jsonContent[0].ELEMENTWANTED
    var fileContents = fs.readFileSync('js\\plugins\\fullMock.json');
    var jsonContent = JSON.parse(fileContents);
 
-   var scenes = 74;
+   //var scenes = jsonContent.length;
 
-   for (var i = 0; i < scenes; i++) {
+   for (var i = 0; i < jsonContent.length; i++) {
        if (jsonContent[i].Risk == '1') {
            array1.push(jsonContent[i].SceneID);
        }
@@ -223,7 +223,9 @@ if you want to access items in the first element do jsonContent[0].ELEMENTWANTED
    mainArray.push(array4);
    mainArray.push(array5);
 
-   $gameMessage.add("Arrays Populated");​
+   console.log(mainArray[0]);
+   console.log(mainArray[1]);
+   console.log(mainArray[2]);
 
 
 
@@ -231,7 +233,7 @@ if you want to access items in the first element do jsonContent[0].ELEMENTWANTED
    // $gameMessage.add('Read');
     //data = JSON.parse(fileContents);
     //$gameMessage.add('doing a thing');
-    $gameMessage.add(data);
+   // $gameMessage.add(data);
 }
 function activateScene(){
 
@@ -267,6 +269,7 @@ function activateScene(){
         }
 
 
+
         index = Math.floor(Math.random() * mainArray[min].length);
         $gameMessage.add("scene to activate is " + mainArray[min][index]);
         $gameSwitches.setValue(mainArray[min][index], true);
@@ -281,7 +284,7 @@ function activateScene(){
 
         index = Math.floor(Math.random() * mainArray[max].length); //generate a random number​
         $gameMessage.add("scene to activate is " + mainArray[max][index]);
-        $gameSwitches.setValue(mainArray[min][index], true);
+        $gameSwitches.setValue(mainArray[max][index], true);
         mainArray[max].splice(index, 1); // Remove the item from the array​
         //console.log(mainArray);
 
@@ -290,7 +293,9 @@ function activateScene(){
 
     //console.log("min: " + min);
     //console.log("max: " + max);
-
+    console.log(mainArray[0]);
+    console.log(mainArray[1]);
+    console.log(mainArray[2]);
     count++;
 
 //}​

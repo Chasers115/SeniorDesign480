@@ -296,6 +296,8 @@ function activateScene(){
     console.log(mainArray[0]);
     console.log(mainArray[1]);
     console.log(mainArray[2]);
+    console.log(mainArray[3]);
+    console.log(mainArray[4]);
     count++;
 
 //}​

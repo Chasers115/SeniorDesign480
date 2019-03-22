@@ -77,7 +77,7 @@ for (i = 0; i < length; i++) {
 //write the json to a json file titled "fullMeta.json". This will all end up on one line though,
 //so there will need to be another function call to transform that file into multiple json files
 //for easier usability. 
-fs.writeFile('MetaData.json', JSON.stringify(singleResult), (err) => {
+fs.writeFile('fullMeta.json', JSON.stringify(singleResult), (err) => {
     if(err){
         console.error(err);
         return;

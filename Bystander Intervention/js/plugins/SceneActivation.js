@@ -303,6 +303,8 @@ function activateScene(){
 //}​
    
 }
+
+//actual logic
 (function() {
     
     //does alaising so there isnt interference with other plugins.

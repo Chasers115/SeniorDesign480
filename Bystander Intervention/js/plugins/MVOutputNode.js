@@ -101,7 +101,7 @@
             }
             //$gameTemp.reserveCommonEvent(5);
             //$gameTemp.reserveCommonEvent(5);
-            $gameMessage.add('Doop');
+            //$gameMessage.add('Doop');
             //$gameTemp.reserveCommonEvent(6);
             console.log('correctly recognized the plugin command');
 

@@ -19,14 +19,7 @@ const result = excelToJson(
             A: 'SceneID',
             B: 'Title',
             C: 'Risk',
-            D: 'mapID',
-            E: 'EventID',
-            F: 'Option One',
-            G: 'Option 2',
-            H: 'Option 3',
-            I: 'In RPG Maker',
-            J: 'Initialization Social Message',
-            K: 'BestChoice'
+            D: 'BestChoice'
 
         }
     });

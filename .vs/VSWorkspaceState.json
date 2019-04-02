@@ -4,7 +4,8 @@
     "\\Bystander Intervention",
     "\\Bystander Intervention\\data",
     "\\Bystander Intervention\\js",
-    "\\Bystander Intervention\\js\\plugins"
+    "\\Bystander Intervention\\js\\plugins",
+    "\\Bystander Intervention\\MetaData"
   ],
   "SelectedNode": "\\Bystander Intervention\\js\\plugins\\SceneActivation.js",
   "PreviewInSolutionExplorer": false

@@ -114,9 +114,9 @@ function populateTables() {
     mainArray.push(array4);
     mainArray.push(array5);
 
-    //$gameMessage.add("Tables Popluated")
+    //$gameMessage.add("Tables Populated")
     activateScene();
-    $gameSwitches.setValue(200, false);
+    $gameSwitches.setValue(2000, false);
 
 
 
@@ -136,8 +136,8 @@ function activateScene() {
 
     if (counter == 5) {
         //Number generator to pick 5 scenes
-        //while(count < 5)?
-        //{?
+        while(count < 5)
+        {
         //determines what risk level to choose
         //generate a number between 1 and 100
         indexChosen = Math.floor((Math.random() * 100) + 1);
@@ -185,12 +185,12 @@ function activateScene() {
         }
 
         count++;
-        //}
+        }
 
         counter = 0;
     }
 
-    $gameSwitches.setValue(199, false);
+    $gameSwitches.setValue(1999, false);
 
 
 

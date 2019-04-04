@@ -86,17 +86,21 @@
                 console.log(jsonContent[i].SceneID)
                 if (jsonContent[i].SceneID == args[0])
                 {
-                    console.log('Best Choice Var' + jsonContent[i].Best_Choice);
+                    console.log('Best Choice Var' + jsonContent[i].BestChoice);
                     console.log('printing the value of the variable' + $gameVariables.value(args[0]));
                     //found the correct scenario
                     if ($gameVariables.value(args[0]) == jsonContent[i].BestChoice){
                         console.log("Good choice");
                         goodChoice = 1;
+                        $gameVariables.setValue(500, $gameVariables.value(500)+1);
+                        //$gameVariables.value(500) += 1;
+                        
                     }
                     else{
                         console.log("poor choice");
                         goodChoice = 0;
                     }
+                    console.log('number of correct scenarios so far: ' + $gameVariables.value(500));
                 }
             }
             //$gameTemp.reserveCommonEvent(5);

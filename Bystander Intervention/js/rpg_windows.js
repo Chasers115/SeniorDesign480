@@ -1034,7 +1034,7 @@ Window_Selectable.prototype.processHandling = function() {
         }
     }
 };
-
+Window_MenuCommand
 Window_Selectable.prototype.processWheel = function() {
     if (this.isOpenAndActive()) {
         var threshold = 20;

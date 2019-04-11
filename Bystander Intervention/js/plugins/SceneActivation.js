@@ -85,26 +85,26 @@ function populateTables() {
     if you want to access items in the first element do jsonContent[0].ELEMENTWANTED.
     */
 
-    var fileContents = fs.readFileSync('js\\plugins\\fullMock.json');
+    var fileContents = fs.readFileSync('js\\plugins\\MetaData.json');
     var jsonContent = JSON.parse(fileContents);
 
     //var scenes = jsonContent.length;
 
     for (var i = 0; i < jsonContent.length; i++) {
         if (jsonContent[i].Risk == '1') {
-            array1.push(jsonContent[i].SceneID);
+            array1.push(jsonContent[i].SceneID2);
         }
         if (jsonContent[i].Risk == '2') {
-            array2.push(jsonContent[i].SceneID);
+            array2.push(jsonContent[i].SceneID2);
         }
         if (jsonContent[i].Risk == '3') {
-            array3.push(jsonContent[i].SceneID);
+            array3.push(jsonContent[i].SceneID2);
         }
         if (jsonContent[i].Risk == '4') {
-            array4.push(jsonContent[i].SceneID);
+            array4.push(jsonContent[i].SceneID2);
         }
         if (jsonContent[i].Risk == '5') {
-            array5.push(jsonContent[i].SceneID);
+            array5.push(jsonContent[i].SceneID2);
         }
     }
 

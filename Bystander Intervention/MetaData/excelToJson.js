@@ -17,9 +17,10 @@ const result = excelToJson(
         columnToKey:
         {
             A: 'SceneID',
-            B: 'Title',
-            C: 'Risk',
-            D: 'BestChoice'
+            B: 'SceneID2',
+            C: 'Title',
+            D: 'Risk',
+            E: 'BestChoice'
 
         }
     });

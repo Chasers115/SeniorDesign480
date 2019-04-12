@@ -26,9 +26,9 @@
 
 
 
+            var playerName = $gameActors.actor(1).name();
 
-
-            fs.appendFile('Output.xls', od1 + "\t" + od2 + "\t" + od3 + "\t" + $gameSystem.playtimeText() + "\n", function (err) {
+            fs.appendFile(playerName + '.xls', od1 + "\t" + od2 + "\t" + od3 + "\t" + $gameSystem.playtimeText() + "\n", function (err) {
                 console.log("Writting to the file");
                 if (err) {
                     return console.log(err);

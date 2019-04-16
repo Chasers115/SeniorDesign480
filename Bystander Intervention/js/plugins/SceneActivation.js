@@ -159,7 +159,7 @@ function activateScene() {
 
 
             index = Math.floor(Math.random() * mainArray[min].length);
-            $gameMessage.add("scene to activate is " + mainArray[min][index]);
+           // $gameMessage.add("scene to activate is " + mainArray[min][index]);
             $gameSwitches.setValue(mainArray[min][index], true);
             mainArray[min].splice(index, 1); //Remove the item from the array
 
@@ -171,7 +171,7 @@ function activateScene() {
 
 
             index = Math.floor(Math.random() * mainArray[max].length); //generate a random number
-            $gameMessage.add("scene to activate is " + mainArray[max][index]);
+            //$gameMessage.add("scene to activate is " + mainArray[max][index]);
             $gameSwitches.setValue(mainArray[max][index], true);
             mainArray[max].splice(index, 1); // Remove the item from the array
 
@@ -180,8 +180,9 @@ function activateScene() {
         }
         else {
 
-            $gameMessage.add("No more");
-
+           // $gameMessage.add("No more");
+            //Set a switch value here to auto-do the end of the game thing.
+                $gameSwitches.setValue(500, true);
         }
 
         count++;

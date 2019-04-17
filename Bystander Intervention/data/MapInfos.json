@@ -16,9 +16,9 @@ null,
 {"id":14,"expanded":true,"name":"School_Map","order":27,"parentId":19,"scrollX":4210,"scrollY":2915},
 {"id":15,"expanded":true,"name":"Dorm_1","order":31,"parentId":19,"scrollX":3714,"scrollY":2535},
 {"id":16,"expanded":false,"name":"Room_Templates","order":7,"parentId":34,"scrollX":6214.666666666667,"scrollY":3134.6666666666665},
-{"id":17,"expanded":true,"name":"Student_Center","order":29,"parentId":19,"scrollX":2511,"scrollY":4857},
+{"id":17,"expanded":true,"name":"Student_Center","order":29,"parentId":19,"scrollX":2199.2,"scrollY":4683.2},
 {"id":18,"expanded":false,"name":"Vincent 2","order":6,"parentId":34,"scrollX":1768.5,"scrollY":709.5},
-{"id":19,"expanded":true,"name":"Campus_Map","order":26,"parentId":0,"scrollX":5301,"scrollY":10515},
+{"id":19,"expanded":true,"name":"Campus_Map","order":26,"parentId":0,"scrollX":5301.333333333333,"scrollY":10514.666666666666},
 {"id":20,"expanded":true,"name":"School_Rooms","order":28,"parentId":14,"scrollX":4210,"scrollY":3541},
 {"id":21,"expanded":false,"name":"Student_Center_Rooms","order":30,"parentId":17,"scrollX":989,"scrollY":5075},
 {"id":22,"expanded":false,"name":"Dorm_1_Maps","order":32,"parentId":15,"scrollX":2433,"scrollY":6855},
@@ -34,5 +34,5 @@ null,
 {"id":32,"expanded":true,"name":"Chase_Scenarios","order":24,"parentId":34,"scrollX":3402,"scrollY":890},
 {"id":33,"expanded":false,"name":"EndGame Map","order":25,"parentId":34,"scrollX":819,"scrollY":453},
 {"id":34,"expanded":true,"name":"Testing_Maps","order":1,"parentId":0,"scrollX":6552,"scrollY":3624},
-{"id":35,"expanded":false,"name":"Tutorial","order":5,"parentId":7,"scrollX":2457,"scrollY":1359}
+{"id":35,"expanded":false,"name":"Tutorial","order":5,"parentId":7,"scrollX":1040,"scrollY":630.6666666666666}
 ]
